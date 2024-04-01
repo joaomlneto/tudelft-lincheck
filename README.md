@@ -1,5 +1,4 @@
-# Lincheck at PPoPP '24
+# Lincheck talk at TU Delft (April 2, 2024)
 
 Practical materials for the "Lincheck: A Practical Framework for Testing Concurrent Data Structures on JVM" 
-talk at the "[Concurrent Algorithms in Kotlin Coroutines](https://lp.jetbrains.com/concurrent-algorithms-in-kotlin-coroutines-ppopp24)" 
-tutorial at [PPoPP '24](https://ppopp24.sigplan.org/).
+talk at TU Delft on April 2, 2024 (https://se.ewi.tudelft.nl/events/2024/04/02/lecture-jetbrains-nikita-koval/).
