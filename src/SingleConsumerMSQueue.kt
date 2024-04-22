@@ -21,6 +21,7 @@ class SingleConsumerMSQueue<T> {
                 return
             } else {
                 // TODO: help to adjust the `tail` pointer.
+                tail.compareAndSet(curTail, curTail.next.get())
             }
         }
     }

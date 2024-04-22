@@ -10,7 +10,7 @@ class SingleConsumerMSQueueLincheckTest {
     //  Add a `nonParallelGroup` option to the
     //  `@Operation(..)` annotation to forbid parallel
     //  `add(..)` calls.
-    @Operation
+    @Operation(nonParallelGroup = "consumers")
     fun poll() = queue.poll()
 
     @Operation
@@ -21,6 +21,9 @@ class SingleConsumerMSQueueLincheckTest {
     //  queue state at the end of each execution.
     //  Call `queue.validateState()` for this.
 
+    @Operation
+    fun validate() = queue.validateState()
+
     @Test
     fun modelCheckingTest() = ModelCheckingOptions()
         // TODO 2:
@@ -28,6 +31,7 @@ class SingleConsumerMSQueueLincheckTest {
         //  by calling `checkObstructionFreedom()` on
         //  the constructed `ModelCheckingOptions`.
         //
+        .checkObstructionFreedom()
         // TODO 4:
         //  Provide a sequential queue implementation
         //  for a more robust results verification.
